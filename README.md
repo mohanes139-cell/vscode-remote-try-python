@@ -106,6 +106,20 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+#-----------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE in the project root for license information.
+#-----------------------------------------------------------------------------------------
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return app.send_static_file("index.html")
+    
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000
 ## License
 
 Copyright © Microsoft Corporation All rights reserved.<br />
